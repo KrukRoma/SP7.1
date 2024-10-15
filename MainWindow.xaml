@@ -1,0 +1,30 @@
+﻿<Window x:Class="PD_311_AsyncAwait.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PD_311_AsyncAwait"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Click="SearchButton_Click">Search</Button>
+            <Button Click="SelectFileButton_Click">Select File</Button>
+            <Button Click="SelectFolderButton_Click">Select Folder</Button>
+            <Button Click="SaveButton_Click">Save Results</Button>
+        </ToolBar>
+
+        <TextBox x:Name="wordTextBox" Width="300" Margin="5" 
+                 Text="Enter search word" 
+                 GotFocus="wordTextBox_GotFocus" 
+                 LostFocus="wordTextBox_LostFocus" />
+
+        <TextBox x:Name="pathTextBox" Width="500" Margin="5" 
+                 Text="Enter or select directory" 
+                 GotFocus="pathTextBox_GotFocus" 
+                 LostFocus="pathTextBox_LostFocus" />
+
+        <ProgressBar x:Name="progressBar" DockPanel.Dock="Bottom" Height="20" Value="0" />
+        <ListBox x:Name="resultsList" />
+    </DockPanel>
+</Window>
